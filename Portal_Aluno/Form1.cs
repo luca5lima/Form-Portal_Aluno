@@ -30,6 +30,8 @@ namespace Portal_Aluno
                 var aluno = new Aluno(nome, idade, curso);
                 Alunos.Add(aluno);
 
+                lv_alunos.Items.Add(new ListViewItem(new String[] { nome, idade, curso }));
+
             }
             catch (Exception ex)
             {
