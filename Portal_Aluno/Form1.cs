@@ -1,7 +1,10 @@
+using Portal_Aluno.Models;
+
 namespace Portal_Aluno
 {
     public partial class Form1 : Form
     {
+        public List<Aluno> Alunos { get; private set; } = new List<Aluno>();
         public Form1()
         {
             InitializeComponent();
@@ -14,6 +17,10 @@ namespace Portal_Aluno
                 var nome = txt_nome.Text;
                 var idade = txt_idade.Text;
                 var curso = txt_curso.Text;
+
+                var aluno = new Aluno(nome, idade, curso);
+                Alunos.Add(aluno);
+
             }
             catch (Exception ex)
             {
