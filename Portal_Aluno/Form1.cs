@@ -6,5 +6,10 @@ namespace Portal_Aluno
         {
             InitializeComponent();
         }
+
+        private void btn_adicionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,11 +37,11 @@
             txt_idade = new TextBox();
             txt_curso = new TextBox();
             panel1 = new Panel();
+            label5 = new Label();
             lv_alunos = new ListView();
             Nome = new ColumnHeader();
             Idade = new ColumnHeader();
             Curso = new ColumnHeader();
-            label5 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             btn_adicionar.TabIndex = 0;
             btn_adicionar.Text = "Adicionar";
             btn_adicionar.UseVisualStyleBackColor = true;
+            btn_adicionar.Click += btn_adicionar_Click;
             // 
             // label1
             // 
@@ -133,6 +134,17 @@
             panel1.Size = new Size(385, 410);
             panel1.TabIndex = 8;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 16F);
+            label5.Location = new Point(10, 30);
+            label5.Name = "label5";
+            label5.Size = new Size(157, 30);
+            label5.TabIndex = 9;
+            label5.Text = "Lista de Alunos";
+            // 
             // lv_alunos
             // 
             lv_alunos.Columns.AddRange(new ColumnHeader[] { Nome, Idade, Curso });
@@ -157,17 +169,6 @@
             // 
             Curso.Text = "Curso";
             Curso.Width = 160;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(10, 30);
-            label5.Name = "label5";
-            label5.Size = new Size(157, 30);
-            label5.TabIndex = 9;
-            label5.Text = "Lista de Alunos";
             // 
             // Form1
             // 
