@@ -18,6 +18,15 @@ namespace Portal_Aluno
                 var idade = txt_idade.Text;
                 var curso = txt_curso.Text;
 
+                foreach (var item in Alunos)
+                {
+                    if (item.Nome == nome)
+                    {
+                        MessageBox.Show(nome + "já está cadastrado no sistema");
+                        return;
+                    }
+                }
+
                 var aluno = new Aluno(nome, idade, curso);
                 Alunos.Add(aluno);
 
